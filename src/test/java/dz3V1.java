@@ -5,6 +5,7 @@ import org.junit.jupiter.api.Test;
 import org.openqa.selenium.WebElement;
 
 import static com.codeborne.selenide.Condition.cssClass;
+import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;
@@ -40,12 +41,25 @@ public class dz3V1 {
         $(byText("Music")).click();
         $("input[type=file]").sendKeys("E:/Users/ivant/Desktop/Безымянный.jpg");
         $("#currentAddress").setValue("Vetoshnyy Pereulok, 5, офис 219, Moscow, 109012");
+        $(byText("Select State")).click();
+        $(byText("Uttar Pradesh")).click();
+        $("#city").click();
+        $(byText("Lucknow")).click();
+        $("#submit").click();
+
+        $("[class=table-responsive]").shouldHave(text("Test Testov"), text("Testovich@test.ru"), text("Other"),
+                text("8999999999"), text("13 March,2023"), text("Sports, Reading, Music"), text("Безымянный.jpg"),
+                text("Vetoshnyy Pereulok, 5, офис 219, Moscow, 109012"), text("Uttar Pradesh Lucknow"));
 
 
 
 
 
-        }
+
+
+
+
+    }
     }
 
 

@@ -50,7 +50,10 @@ public class AutomationPracticeForm {
         $(byText("Lucknow")).click();
         $("#submit").click();
 
-        $("[class=table-responsive]").shouldHave(text("Test Testov"), text("Testovich@test.ru"), text("Other"), text("8999999999"), text("13 March,2023"), text("Sports, Reading, Music"), text("img.jpg"), text("Vetoshnyy Pereulok, 5, офис 219, Moscow, 109012"), text("Uttar Pradesh Lucknow"));
+        $("[class=table-responsive]").shouldHave(text("Test Testov"), text("Testovich@test.ru"),
+                text("Other"), text("8999999999"), text("13 March,2023"), text("Sports, Reading, Music"),
+                text("img.jpg"), text("Vetoshnyy Pereulok, 5, офис 219, Moscow, 109012"),
+                text("Uttar Pradesh Lucknow"));
 
 
     }
